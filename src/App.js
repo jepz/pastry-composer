@@ -6,12 +6,17 @@ import {
   Redirect,
   withRouter
 } from "react-router-dom";
+import styled from "styled-components";
 import logo from './logo.svg';
 import './App.css';
 
+const AppDiv = styled.div`
+text-align: center;
+`;
+
 function App() {
   return (
-    <div className="App">
+    <AppDiv>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -26,7 +31,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </AppDiv>
   );
 }
 
