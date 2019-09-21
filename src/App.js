@@ -12,6 +12,7 @@ import './App.css';
 
 const AppDiv = styled.div`
 text-align: center;
+margin:auto 0;
 `;
 
 function App() {
