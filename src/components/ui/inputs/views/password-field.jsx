@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 
@@ -6,16 +6,18 @@ const StyledInput = styled.input`
   font-size: 10px;
 `;
 
-const InputField = props => {
-  const { types, value } = props;
-  return <StyledInput type={types} value={value} />;
+const PasswordField = props => {
+  const {} = props;
+  const [value, setValue] = useState('');
+
+  return <StyledInput type="password" value={value} onChange={setValue} />;
 };
 
-InputField.defaultProps = {
+PasswordField.defaultProps = {
   types: 'text',
   value: ''
 };
-InputField.propTypes = {
+PasswordField.propTypes = {
   /** Set what type of input that should be used. */
   types: propTypes.string,
 
@@ -23,4 +25,4 @@ InputField.propTypes = {
   value: propTypes.string
 };
 
-export default InputField;
+export default PasswordField;
