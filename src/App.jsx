@@ -13,6 +13,9 @@ import './App.css';
 const AppDiv = styled.div`
   text-align: center;
   margin: auto 0;
+  background-color: #fefcec;
+  height: 100%;
+  width: 100%;
 `;
 
 const App = () => (

@@ -7,18 +7,27 @@ const StyledInput = styled.input`
 `;
 
 const PasswordField = props => {
-  const {} = props;
-  const [value, setValue] = useState('');
-
-  return <StyledInput type="password" value={value} onChange={setValue} />;
+  const { previousValue } = props;
+  const [changedValue, setValue] = useState(previousValue);
+  const handleOnChange = e => {
+    const { value } = e.target;
+    setValue(value);
+  };
+  return (
+    <StyledInput
+      type="password"
+      value={changedValue}
+      onChange={handleOnChange}
+    />
+  );
 };
 
 PasswordField.defaultProps = {
-  value: ''
+  previousValue: ''
 };
 PasswordField.propTypes = {
   /** What value the fields has.  */
-  value: propTypes.string
+  previousValue: propTypes.string
 };
 
 export default PasswordField;
