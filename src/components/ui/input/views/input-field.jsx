@@ -1,9 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import propTypes from 'prop-types';
+
+const StyledInput = styled.input`
+  font-size: 10px;
+`;
 
 const InputField = props => {
   const { types, value } = props;
-  return <input type={types} value={value} />;
+  return <StyledInput type={types} value={value} />;
 };
 
 InputField.defaultProps = {
@@ -15,7 +20,7 @@ InputField.propTypes = {
   types: propTypes.string,
 
   /** What value the fields has.  */
-  value: propTypes.object
+  value: propTypes.string
 };
 
 export default InputField;
