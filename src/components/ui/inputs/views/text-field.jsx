@@ -11,7 +11,6 @@ const TextField = props => {
   const [changedValue, setValue] = useState(previousValue);
   const handleOnChange = e => {
     const { value } = e.target;
-    console.log(value);
     setValue(value);
   };
   return (
@@ -25,14 +24,10 @@ const TextField = props => {
 };
 
 TextField.defaultProps = {
-  types: 'text',
   previousValue: '',
   name: 'StateProp'
 };
 TextField.propTypes = {
-  /** Set what type of input that should be used. */
-  types: propTypes.string,
-
   /** Name of the prop in state */
   name: propTypes.string,
   /** What value the fields has.  */

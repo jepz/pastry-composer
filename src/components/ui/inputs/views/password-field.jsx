@@ -14,13 +14,9 @@ const PasswordField = props => {
 };
 
 PasswordField.defaultProps = {
-  types: 'text',
   value: ''
 };
 PasswordField.propTypes = {
-  /** Set what type of input that should be used. */
-  types: propTypes.string,
-
   /** What value the fields has.  */
   value: propTypes.string
 };
