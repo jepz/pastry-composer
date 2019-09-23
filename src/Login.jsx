@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import styled from 'styled-components';
 import LoginScreen from './screens/login';
+import App from './App';
 import './App.css';
 
 const AppDiv = styled.div`
@@ -33,21 +34,23 @@ const auth = {
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render={props => (auth.isAuthenticated ? (
+    render={props =>
+      auth.isAuthenticated ? (
         <Component {...props} />
       ) : (
         <Redirect to={{ pathname: '/', state: { from: props.location } }} />
-      ))}
+      )
+    }
   />
 );
 
-const App = () => (
+const Login = () => (
   <AppDiv>
     <Router>
-      <Route path="/" exact component={LoginScreen} />
-      <PrivateRoute path="/pastry" exact component={LoginScreen} />
+      <Route path='/' exact component={LoginScreen} />
+      <PrivateRoute path='/pastry' exact component={App} />
     </Router>
   </AppDiv>
 );
 
-export default App;
+export default Login;
