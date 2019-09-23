@@ -3,7 +3,23 @@ import styled from 'styled-components';
 import propTypes from 'prop-types';
 
 const StyledInput = styled.input`
-  font-size: 10px;
+  display: inline-block;
+
+  line-height: 1.1;
+  height: 15px;
+  background-color: #fff;
+  border: 1px solid #cdcdcd;
+  margin: 10px 0;
+  width: 100%;
+  padding: 17px 10px 13px 10px;
+  font-family: 'avenir-roman', 'Avenir 55 Roman', sans-serif;
+  color: #737373;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  :focus {
+    outline: 1px solid #cba462;
+  }
 `;
 
 const TextField = props => {
@@ -15,7 +31,7 @@ const TextField = props => {
   };
   return (
     <StyledInput
-      type="text"
+      type='text'
       value={changedValue}
       name={name}
       onChange={handleOnChange}
@@ -24,7 +40,7 @@ const TextField = props => {
 };
 
 TextField.defaultProps = {
-  previousValue: '',
+  previousValue: 'Test text',
   name: 'StateProp'
 };
 TextField.propTypes = {
