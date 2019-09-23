@@ -5,7 +5,6 @@ import { SubmitButton } from '../ui/button';
 
 const StyledForm = styled.form`
   background-color: #fefcec;
-  display: inline-block;
   height: 200px;
   width: 200px;
 `;
@@ -18,7 +17,7 @@ const LoginForm = () => {
     <StyledForm onSubmit={handleOnSubmit}>
       <TextField />
       <PasswordField />
-      <SubmitButton label='click me' />
+      <SubmitButton label="click me" />
     </StyledForm>
   );
 };

@@ -10,10 +10,13 @@ const StyedScreen = styled.div`
 
 const CenterDiv = styled.div`
   text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
 `;
 
 const Logotype = styled.img`
-  display: inline-block;
   width: 136px;
   height: 98px;
 `;
@@ -21,7 +24,7 @@ const Logotype = styled.img`
 const LoginScreen = () => (
   <StyedScreen>
     <CenterDiv>
-      {/* <Logotype src={logo} alt="Pågen logotyp" /> */}
+      <Logotype src={logo} alt="Pågen logotyp" />
       <LoginForm />
     </CenterDiv>
   </StyedScreen>
